@@ -1,0 +1,77 @@
+/* src/blog-style.css */
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #fcfbf9;
+  color: #000000;
+  margin: 0;
+  padding: 24px;
+}
+
+.container {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+/* Tombol Kembali Tema Neo-brutalism */
+.btn-back {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  transition: all 0.15s ease;
+  margin-bottom: 40px;
+}
+
+.btn-back:hover {
+  transform: translate(0.5px, 0.5px);
+  box-shadow: 2.5px 2.5px 0px 0px #000000;
+}
+
+/* Kontainer Utama */
+.main-card {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  padding: 32px;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+
+/* Badge Judul Atas */
+.badge-title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  background-color: #4ade80;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  margin-bottom: 32px;
+}
+
+/* Kotak List Materi Kuliah */
+.article-item {
+  padding: 20px;
+  border: 2px solid #000000;
+  background-color: #fcfbf9;
+  box-shadow: 3px 3px 0px 0px #000000;
+  margin-bottom: 24px;
+}
+
+.article-title {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.article-text {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+}
