@@ -12,7 +12,19 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
-// Menghilangkan hashtag (#) dari URL saat menu diklik, tapi tetap melakukan smooth scroll
+// Membersihkan /index.html dari URL secara otomatis saat pertama kali dibuka
+if (window.location.pathname.includes("index.html")) {
+  const cleanUrl =
+    window.location.protocol +
+    "//" +
+    window.location.host +
+    window.location.pathname.replace("/index.html", "") +
+    window.location.search +
+    window.location.hash;
+  window.history.replaceState({}, document.title, cleanUrl);
+}
+
+// Menghilangkan hashtag (#) dari URL saat menu navbar diklik
 document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -24,9 +36,9 @@ document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
         behavior: "smooth",
       });
 
-      // Memastikan URL tetap bersih tanpa #tag di belakangnya
+      // Mengubah URL agar kembali bersih murni domain utama
       if (window.history.pushState) {
-        window.history.pushState("", "", window.location.pathname);
+        window.history.pushState("", "", window.location.origin + "/");
       }
     }
   });
