@@ -11,3 +11,23 @@ darkModeToggle.addEventListener("click", () => {
     darkModeToggle.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
   }
 });
+
+// Menghilangkan hashtag (#) dari URL saat menu diklik, tapi tetap melakukan smooth scroll
+document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      // Memastikan URL tetap bersih tanpa #tag di belakangnya
+      if (window.history.pushState) {
+        window.history.pushState("", "", window.location.pathname);
+      }
+    }
+  });
+});
