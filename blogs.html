@@ -127,5 +127,14 @@
         </article>
       </div>
     </main>
+    <!-- Script untuk membersihkan URL agar tetap terlihat julijul.my.id -->
+    <script>
+      if (window.location.pathname.includes('blogs.html')) {
+        // Mengubah tampilan URL di browser menjadi root domain, tetapi tetap memuat halaman blogs.html
+        window.history.replaceState({}, '', '/');
+      }
+    </script>
+  </body>
+</html>
   </body>
 </html>
