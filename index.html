@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhamad Zulfikri ? Portfolio</title>
+    <title>Muhamad Zulfikri</title>
     <!-- Google Fonts & Tailwind CSS CDN untuk utility tambahan -->
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
@@ -15,18 +15,23 @@
   <body class="bg-[#fcfbf9] text-black transition-colors duration-300">
     <!-- HEADER / NAVBAR (Sticky & Fixed di Atas) -->
     <header
-      class="fixed top-0 left-0 right-0 z-50 bg-[#fcfbf9]/90 backdrop-blur-md border-b-2 border-black py-4 transition-colors duration-300"
+      class="fixed top-0 left-0 right-0 z-50 bg-[#fcfbf9]/90 backdrop-blur-md border-b-2 border-black py-3 px-4 transition-colors duration-300"
     >
-      <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-        <!-- Pastikan href-nya hanya berisi tanda pagar (#) atau garis miring (/) -->
+      <div
+        class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-3"
+      >
+        <!-- Logo / Nama -->
         <a
           href="/"
-          class="font-bold tracking-wider text-sm sm:text-base px-3 py-1 bg-[#4ade80] border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] uppercase"
+          class="font-bold tracking-wider text-xs sm:text-base px-3 py-1.5 bg-[#4ade80] border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] uppercase"
         >
           MUHAMAD ZULFIKRI
         </a>
 
-        <nav class="hidden md:flex gap-4 font-semibold text-sm">
+        <!-- Menu Navigasi (Muncul di HP maupun Desktop) -->
+        <nav
+          class="flex flex-wrap items-center gap-2 sm:gap-4 font-semibold text-xs sm:text-sm"
+        >
           <a
             href="#about"
             onclick="
@@ -34,9 +39,8 @@
               document
                 .getElementById('about')
                 .scrollIntoView({ behavior: 'smooth' });
-              window.history.pushState(null, null, '/');
             "
-            class="px-4 py-2 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+            class="px-2.5 sm:px-4 py-1.5 sm:py-2 border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
             >About</a
           >
 
@@ -47,9 +51,8 @@
               document
                 .getElementById('skills')
                 .scrollIntoView({ behavior: 'smooth' });
-              window.history.pushState(null, null, '/');
             "
-            class="px-4 py-2 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+            class="px-2.5 sm:px-4 py-1.5 sm:py-2 border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
             >Skills</a
           >
 
@@ -60,15 +63,14 @@
               document
                 .getElementById('projects')
                 .scrollIntoView({ behavior: 'smooth' });
-              window.history.pushState(null, null, '/');
             "
-            class="px-4 py-2 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+            class="px-2.5 sm:px-4 py-1.5 sm:py-2 border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
             >Projects</a
           >
 
           <a
             href="blogs.html"
-            class="px-4 py-2 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+            class="px-2.5 sm:px-4 py-1.5 sm:py-2 border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
             >Blogs</a
           >
 
@@ -79,28 +81,28 @@
               document
                 .getElementById('contact')
                 .scrollIntoView({ behavior: 'smooth' });
-              window.history.pushState(null, null, '/');
             "
-            class="px-4 py-2 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+            class="px-2.5 sm:px-4 py-1.5 sm:py-2 border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
             >Contact</a
           >
-        </nav>
 
-        <button
-          id="dark-mode-toggle"
-          class="p-2.5 border-2 border-black bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all cursor-pointer"
-        >
-          <svg
-            id="moon-icon"
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
+          <!-- Tombol Dark/Light Mode -->
+          <button
+            id="dark-mode-toggle"
+            class="p-2 border-2 border-black bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all cursor-pointer"
           >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
+            <svg
+              id="moon-icon"
+              class="w-4 h-4 sm:w-5 sm:h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </nav>
       </div>
     </header>
 
@@ -122,9 +124,8 @@
         <p
           class="text-base sm:text-lg text-neutral-700 font-medium leading-relaxed"
         >
-          Mahasiswa IT semester 5 yang fokus pada pengembangan web, manajemen
-          basis data, serta eksplorasi teknologi modern seperti PHP dan
-          CodeIgniter.
+          Mahasiswa IT semester 5 yang memiliki ketertarikan pada pengembangan
+          web, serta pengembangan aplikasi menggunakan PHP dan CodeIgniter.
         </p>
 
         <div class="flex flex-wrap gap-4 pt-2">
@@ -138,7 +139,6 @@
             href="#contact"
             class="px-6 py-3 bg-white text-black font-bold border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
           >
-            Download CV
           </a>
         </div>
 
@@ -179,7 +179,7 @@
           <div class="polaroid-caption">Ready to Code</div>
 
           <!-- Stiker pink di bawah -->
-          <div class="polaroid-stamp">Cihuyyy</div>
+          <div class="polaroid-stamp">hihu</div>
         </div>
       </div>
     </section>
@@ -223,7 +223,7 @@
         <div
           class="p-4 bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold text-center"
         >
-          Tailwind CSS
+          CodeIgniter
         </div>
       </div>
     </section>
